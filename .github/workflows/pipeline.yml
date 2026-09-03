@@ -16,6 +16,6 @@ jobs:
       - name: Install dependencies      
         run: npm install                # Cài đặt các dependencies từ package.json
       - name: Check style
-        run: npm run lint                # Kiểm tra style code bằng lệnh lint
+        run: npm run eslint                # Kiểm tra style code bằng lệnh eslint
       - name: Build and test
         run: npm run build && npm test   # Xây dựng dự án và chạy các bài kiểm tra
