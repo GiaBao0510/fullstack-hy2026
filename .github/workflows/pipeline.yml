@@ -1,0 +1,19 @@
+name: Deployment pipeline
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  simple_deployment_pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6     # Checkout the repository
+      - uses: actions/setup-node@v6   # thực hiện thiết lập môi trường Node.js
+        with:
+          node-version: '24'            # Thiết lập phiên bản Node.js
+      - name: Install dependencies      
+        run: npm install                # Cài đặt các dependencies từ package.json
+      - name: Check style
+        run: npm run lint                # Kiểm tra style code bằng lệnh lint
