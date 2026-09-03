@@ -25,7 +25,6 @@ module.exports = [
     },
     rules: {
       'indent': ['error', 2],
-      'linebreak-style': ['error', 'unix'],
       'quotes': ['error', 'single'],
       'semi': ['error', 'never'],
       'eqeqeq': 'error',
@@ -33,6 +32,17 @@ module.exports = [
       'object-curly-spacing': ['error', 'always'],
       'arrow-spacing': ['error', { 'before': true, 'after': true }],
       'no-console': 0
+    }
+  },
+  {
+    files: ['jest.setup.js'],
+    languageOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node,
+        ...globals.jest
+      }
     }
   },
   {
@@ -63,7 +73,6 @@ module.exports = [
     rules: {
       ...react.configs.recommended.rules,
       'indent': ['error', 2],
-      'linebreak-style': ['error', 'unix'],
       'quotes': ['error', 'single'],
       'semi': ['error', 'never'],
       'eqeqeq': 'error',
