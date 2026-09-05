@@ -19,3 +19,7 @@ jobs:
         run: npm run eslint                # Kiểm tra style code bằng lệnh eslint
       - name: Build and test
         run: npm run build && npm test   # Xây dựng dự án và chạy các bài kiểm tra
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+      - name: Run end-to-end tests
+        run: npm run test:e2e

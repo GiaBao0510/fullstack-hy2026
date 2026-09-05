@@ -46,6 +46,16 @@ module.exports = [
     }
   },
   {
+    files: ['e2e-tests/**/*.js', 'playwright.config.js'],
+    languageOptions: {
+      ecmaVersion: 2018,
+      sourceType: 'commonjs',
+      globals: {
+        ...globals.node
+      }
+    }
+  },
+  {
     files: ['src/**/*.{js,jsx}', 'test/**/*.{js,jsx}'],
     plugins: {
       react,
