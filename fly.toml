@@ -1,4 +1,4 @@
-app = 'fs-pdex'
+app = 'fullstack-hy2026-gia-bao'
 primary_region = 'arn'
 
 [build]
